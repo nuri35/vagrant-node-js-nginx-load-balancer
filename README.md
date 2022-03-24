@@ -82,3 +82,17 @@ OUTPUT => v16.14.2
 ````
 
 
+### Şimdi sırada Mongodb veritabanımızı shell üzerinden kuracağız
+
+```
+wget -qO - https://www.mongodb.org/static/pgp/server-5.0.asc | sudo apt-key add -
+mkdir /etc/apt/sources.list.d/mongodb-org-5.0.list
+cd ./etc/apt/sources.list.d/mongodb-org-5.0.list
+echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/5.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-5.0.list
+sudo apt-get update
+sudo systemctl start mongod
+
+```
+````
+
+
