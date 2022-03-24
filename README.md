@@ -1,5 +1,6 @@
-
-
+ <img src="https://www.vectorlogo.zone/logos/vagrantup/vagrantup-icon.svg" alt="vagrant" width="40" height="40"/> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nginx/nginx-original.svg" alt="nginx" width="40" height="40"/> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg" alt="nginx" width="40" height="40"/>  
+ 
+ 
 vagrant-node-js-nginx-load-balancer
 ============================
 
