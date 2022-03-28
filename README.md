@@ -177,15 +177,15 @@ Böylelikle nginx ip adresinden isteğimizi gönderdiğimizde (192.168.1.12:5000
  - https://www.apachelounge.com/download/ adresinden benchmark testini yapabilmek için indirelim
  - Burada ilgili komutun tanınabilmesi için $PATH kısmına indirilen klasör bin/ab.exe yolunu belirtelim.
 
-
-  ```
+```
+ ```
 vagrant@web1:~/social-media-app-docker-with-testing$  ab  -n 2000 -c 100 "http://192.168.1.11/blogs/search?page=1&&q=a"
 ```
 ````
  
- #### Açıklama 
+ ### Açıklama 
  
- - Yukarıda ki kodu girelim buradaki parametreleri biraz incelemek gerekirse ;
+ Yukarıda ki kodu girelim buradaki parametreleri biraz incelemek gerekirse ;
     -n =  Belirtilen adrese yapılacak olan toplam istek sayısını belirtir.
     -c: Concurrency = Burada verdiğimiz 100 değeri herhangi bir t anında ilgili adresine istek yapan kullanıcı sayısını belirtir. Stress testi yapılmak istendiğinde bu değer artırılabilir.
     -h = burada belirtmedim fakat eğer istek token gerektiriyorsa ve http header eklemek için kullanılır.
