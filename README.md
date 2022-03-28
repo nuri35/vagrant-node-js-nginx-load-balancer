@@ -199,3 +199,8 @@ vagrant@web1:~/social-media-app-docker-with-testing$  ab  -n 2000 -c 100 "http:/
   
  <img  src="https://github.com/nuri35/vagrant-node-js-nginx-load-balancer/blob/master/images/sonuc.PNG" alt="" width="600" height="300"/> 
  
+ 
+ 
+ #### Zamanla bilgiler eklenecektir !!!!
+ 
+ 
