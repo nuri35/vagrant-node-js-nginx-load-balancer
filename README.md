@@ -138,7 +138,7 @@ sudo vi /etc/nginx/sites-available/default
 ```
 ````
 
- <p>İlgili yerde i tuşuna basarak insert modunu aktif ediyoruz.Aşağıdaki kodu yazıyoruz</p>
+ İlgili yerde i tuşuna basarak insert modunu aktif ediyoruz.Aşağıdaki kodu yazıyoruz.
  
  ###  HTTP Load Balancing
 
@@ -160,6 +160,17 @@ sudo vi /etc/nginx/sites-available/default
 ```
 ````
 
+Böylelikle nginx ip adresinden isteğimizi gönderdiğimizde (192.168.1.12:5000) gibi belirttiğimiz adreslere isteği yollayacak ve yeniden client tarafına nginx üzerinden sonucu ulaştıracaktır.
+
+ ###  nginx yüklü olmayan makine üzerinde ki local ip adresi üzerinden ulaşılan uygulama 
+ 
+ <img  src="https://github.com/nuri35/vagrant-node-js-nginx-load-balancer/blob/master/images/ip%202%20resim.PNG" alt="" width="600" height="300"/> 
+
+ ###  nginx yüklü olan makine üzerinde ki  ip adresi üzerinden ulaşılan uygulama 
+
+ <img  src="https://github.com/nuri35/vagrant-node-js-nginx-load-balancer/blob/master/images/ip%20resim.PNG" alt="" width="600" height="300"/> 
+ 
+ Resimde gördüğünüz gibi ilk resimde nginx ip adresi ve onun üzerinden kendi uygulamamız olan resim'2 deki aynı durumu alabilmekteyiz. Bu durumu
  
   
  
