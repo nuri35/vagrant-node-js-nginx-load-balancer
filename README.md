@@ -192,4 +192,10 @@ vagrant@web1:~/social-media-app-docker-with-testing$  ab  -n 2000 -c 100 "http:/
     -c:  = Burada verdiğimiz 100 değeri herhangi bir t anında ilgili adresine istek yapan kullanıcı sayısını belirtir. Stress testi yapılmak istendiğinde bu değer artırılabilir.
     
     -h = burada belirtmedim fakat eğer istek token gerektiriyorsa ve http header eklemek için kullanılır.
+    
+    
+    
+ ### Sonuç
+  
+ <img  src="https://github.com/nuri35/vagrant-node-js-nginx-load-balancer/blob/master/images/sonuc.PNG" alt="" width="600" height="300"/> 
  
