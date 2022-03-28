@@ -170,8 +170,7 @@ Böylelikle nginx ip adresinden isteğimizi gönderdiğimizde (192.168.1.12:5000
 
  <img  src="https://github.com/nuri35/vagrant-node-js-nginx-load-balancer/blob/master/images/ip%20resim.PNG" alt="" width="600" height="300"/> 
  
- Resimde gördüğünüz gibi ilk resimde nginx ip adresi ve onun üzerinden kendi uygulamamız olan resim'2 deki aynı durumu alabilmekteyiz. Bu durumu
- 
+  ### Şimdi apache benchmark üzerinden testimizi yaparak nginx sayesinde aldığımız sonucu görelim
   
  
  
