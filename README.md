@@ -83,7 +83,7 @@ OUTPUT => v16.14.2
 ````
 
 
-### Şimdi sırada Mongodb veritabanımızı shell üzerinden kuracağız
+### Şimdi sırada Mongodb veritabanımızı shell üzerinden kuracağız ve 
 
 ```
 wget -qO - https://www.mongodb.org/static/pgp/server-5.0.asc | sudo apt-key add -
@@ -96,4 +96,73 @@ sudo systemctl start mongod
 ```
 ````
 
+ <img  src="https://github.com/nuri35/vagrant-node-js-nginx-load-balancer/blob/master/images/1.png" alt="vagrant" width="700" height="400"/> 
+ 
+ -----------------------------------------------------
+ 
+ ### veritabanımızın çalıştığını kontrol etmek için 
+ ```
+vagrant@web1:~/social-media-app-docker-with-testing$ mongo
 
+```
+````
+  ### ÇIKTI 
+  
+   ```
+MongoDB shell version: 3.0.15
+connecting to: test
+Server has startup warnings:
+2022-03-28T12:24:01.242+0000 I CONTROL  [initandlisten]
+2022-03-28T12:24:01.243+0000 I CONTROL  [initandlisten] ** WARNING: /sys/kernel/mm/transparent_hugepage/enabled is 'always'.
+2022-03-28T12:24:01.254+0000 I CONTROL  [initandlisten] **        We suggest setting it to 'never'
+2022-03-28T12:24:01.255+0000 I CONTROL  [initandlisten]
+2022-03-28T12:24:01.258+0000 I CONTROL  [initandlisten] ** WARNING: /sys/kernel/mm/transparent_hugepage/defrag is 'always'.
+2022-03-28T12:24:01.265+0000 I CONTROL  [initandlisten] **        We suggest setting it to 'never'
+2022-03-28T12:24:01.265+0000 I CONTROL  [initandlisten]
+
+```
+````
+  
+   ### Artık 2 aynı uygulamamız da farklı makinalarda ayakta  bunun için npm start diyerek başlatıyoruz. 
+   
+   
+ <img  src="https://github.com/nuri35/vagrant-node-js-nginx-load-balancer/blob/master/images/ekran%202.PNG" alt="vagrant" width="600" height="400"/> 
+   
+   ### Sonuç olarak nginx ile loadbalancing işlemimizi yapabiliriz.Bunun için nginx konfigrasyonlarımızı yapmak durumundayız.
+ 
+ <p>İlk olarak nginx yüklü makinamızda aşağıdaki komutu çalıştırarak ilgili klasöre giriyoruz</p>
+   
+```
+sudo vi /etc/nginx/sites-available/default
+
+```
+````
+
+ <p>İlgili yerde i tuşuna basarak insert modunu aktif ediyoruz.Aşağıdaki kodu yazıyoruz</p>
+ 
+ ###  HTTP Load Balancing
+
+   ```
+       http {
+    upstream my_upstream {
+        server server1.example.com;
+        server server2.example.com;
+    }
+
+    server {
+        listen 80;
+        location / {
+            proxy_set_header Host $host;
+            proxy_pass http://my_upstream;
+        }
+    }
+}
+```
+````
+
+ 
+  
+ 
+ 
+ 
+ 
